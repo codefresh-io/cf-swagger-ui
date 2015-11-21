@@ -835,7 +835,8 @@ SwaggerClient.prototype.build = function (mock) {
     url: this.url,
     method: 'get',
     headers: {
-      accept: this.swaggerRequestHeaders
+      accept: this.swaggerRequestHeaders,
+      "x-access-token": encodeURIComponent($('#input_apiKey')[0].value)
     },
     on: {
       error: function (response) {
